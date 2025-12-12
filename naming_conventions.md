@@ -426,7 +426,7 @@ SELECT * FROM "Customers";     -- Error! Case-sensitive
 
 | Version | Date | Author|Changes |
 |-|-|-|-|
-| 1.0 | 2025-12-04 | [Ricardo](https://www.linkedin.com/in/ricardordzsaldivar/) |Initial naming conventions established |
+| 1.0 | 2025-12-04 | [Ricardo](https://r3card0.github.io/portfolio/) |Initial naming conventions established |
 
 ---
 

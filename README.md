@@ -5,7 +5,6 @@
 **Status: In Progress**
 
 
-
 A comprehensive PostgreSQL database design for a modern retail Point of Sale system, featuring advanced SQL techniques including triggers, stored procedures, materielized views, and strategic indexing.
 
 ## Table of Contents
@@ -13,6 +12,7 @@ A comprehensive PostgreSQL database design for a modern retail Point of Sale sys
 * [Overview](#-overview)
 * [Business Requirements](#--business-requirements)
 * [Database Schema](#️-database-schema)
+* [Documentation](#-documentation)
 * [Key Features](#-key-features)
 * [Technical Highlights](#-technical-highlights)
 * [Installation](#-installation)
@@ -48,7 +48,7 @@ The system supports the following business operations:
 
 * Daily, monthly, and yearly sales reports
 * Top-selling products and categories
-* Customer pruchase history and preferences
+* Customer purchase history and preferences
 * Low stock alerts and reorder recommendations
 * Revenue analysis by employee, category, and time period
 
@@ -103,6 +103,8 @@ The system supports the following business operations:
 
 **Core Tables**
 
+The rules of naming convention was created in the document: [naming conventions](naming_conventions.md)
+
 |Table|Purpose|Key Feature|
 |-|-|-|
 |customers|Store customer information|Loyalty point, purchase history|
@@ -113,6 +115,39 @@ The system supports the following business operations:
 |sales|Transaction records|Payment methods, timestamps, totals|
 |sale_items|Line items pers sale|Quatities, discounts, pricing snapshot|
 |inventory_logs|Audit trail|Stock movements, reasons, timestamps|
+
+## 📚 Documentation
+
+This project follows industry best practices for database design and documentation. All design decisions are thoroughly documented:
+
+### Design Documents
+
+| Document | Purpose | Location |
+|----------|---------|----------|
+| **Naming Conventions** | Defines naming standards for all database objects (tables, columns, constraints, indexes) | [`NAMING_CONVENTIONS.md`](./NAMING_CONVENTIONS.md) |
+| **Constraints Strategy** | Documents all data validation rules and business logic enforcement | [`CONSTRAINTS_STRATEGY.md`](./CONSTRAINTS_STRATEGY.md) |
+| **ER Diagram** | Visual representation of database structure and relationships | [`docs/ER_diagram.png`](./docs/ER_diagram.png) |
+
+### Why Documentation Matters
+
+Following best practices, README files help document the contents and structure of a dataset so researchers and developers can locate the information they need, with documentation maintained throughout the research or development process. Our documentation ensures:
+
+- **Consistency**: All team members follow the same naming and validation patterns
+- **Maintainability**: Future developers can understand design decisions
+- **Quality**: Constraints prevent invalid data at the database level
+- **Onboarding**: New contributors can get up to speed quickly
+- **Portfolio Value**: Demonstrates professional software engineering practices
+
+### Documentation Standards
+
+Our directory structure includes comprehensive documentation with logical hierarchy, using README files at appropriate levels to describe organization and workflows. Each major component is documented:
+
+- Database setup procedures
+- Schema creation scripts  
+- Sample data generation
+- Query examples and use cases
+- Performance optimization strategies
+
 
 ## ⚡ Key Features
 
